@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: bean_there,design_system
+dependency_overrides:
+  bean_there:
+    path: ..

@@ -1,0 +1,9 @@
+# Learn more about the l10n.yaml by reading this documentation.
+#  https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization#configuring-the-l10nyaml-file
+arb-dir: lib/core/internationalization/l10n
+output-dir: lib/core/internationalization
+output-class: Internationalization
+output-localization-file: internationalization.dart
+synthetic-package: false
+template-arb-file: intl_en.arb
+nullable-getter: false

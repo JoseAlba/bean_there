@@ -1,0 +1,30 @@
+name: Flutter Unit Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    name: Run Flutter Unit Tests
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.27.2
+
+      - name: Install dependencies from root pubspec.yaml
+        run: flutter pub get
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Run all flutter test
+        run: melos run test-unit:all

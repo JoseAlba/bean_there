@@ -1,0 +1,28 @@
+name: widgetbook_workspace
+description: A showcase of the widgets for bean there
+repository: https://github.com/JoseAlba/bean_there
+version: 0.0.1
+publish_to: none
+
+environment:
+  flutter: ^3.27.2
+  sdk: ^3.6.1
+
+dependencies:
+  bean_there:
+    path: ../
+  flutter:
+    sdk: flutter
+  flutter_screenutil: 5.9.3
+  widgetbook: 3.10.2
+  widgetbook_annotation: 3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: 2.4.14
+  flutter_lints: 5.0.0
+  widgetbook_generator: 3.9.1
+
+flutter:
+  uses-material-design: true
