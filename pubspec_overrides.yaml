@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: design_system,image_repository
+dependency_overrides:
+  design_system:
+    path: packages/design_system
+  image_repository:
+    path: packages/image_repository

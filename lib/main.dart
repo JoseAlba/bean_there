@@ -1,10 +1,11 @@
-import 'package:bean_there/core/design_system/theme.dart';
-import 'package:bean_there/core/internationalization/internationalization.dart';
-import 'package:bean_there/core/routes/routes.dart';
-import 'package:bean_there/feature/gallery/presentation/grid_controller.dart';
-import 'package:bean_there/feature/home/presentation/image_controller.dart';
+import 'package:bean_there/app_router/routes.dart';
+import 'package:bean_there/home/home.dart';
+import 'package:bean_there/internationalization/internationalization.dart';
+import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'gallery/gallery.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,14 +17,10 @@ class BeanThereApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
-        ChangeNotifierProvider<ImageController>(
-          create: (_) => ImageController(),
-        ),
-        ChangeNotifierProvider<GridController>(
-          create: (_) => GridController(),
-        ),
+        BlocProvider(create: (_) => ImageCubit()),
+        BlocProvider(create: (_) => GridCubit()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
