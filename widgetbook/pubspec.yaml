@@ -9,10 +9,12 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
-  bean_there:
-    path: ../
   flutter:
     sdk: flutter
+  bean_there:
+    path: ../
+  design_system:
+    path: ../packages/design_system
   flutter_screenutil: 5.9.3
   widgetbook: 3.10.2
   widgetbook_annotation: 3.2.0

@@ -1,0 +1,30 @@
+name: design_system
+description: Design system for bean there
+repository: https://github.com/JoseAlba/bean_there/packages/design_system
+version: 0.0.1
+publish_to: none
+
+environment:
+  flutter: ^3.27.2
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  rive: 0.13.20
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 5.0.0
+
+flutter:
+  assets:
+    - assets/animations/
+  fonts:
+    - family: HennyPenny
+      fonts:
+        - asset: assets/fonts/HennyPenny-Regular.ttf
+          weight: 400
+  generate: true
+  uses-material-design: true

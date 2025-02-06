@@ -13,7 +13,13 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  design_system:
+    path: packages/design_system
+  image_repository:
+    path: packages/image_repository
   cupertino_icons: 1.0.8
+  equatable: 2.0.7
+  flutter_bloc: 9.0.0
   flutter_card_swiper: ^7.0.2
   go_router: 14.7.2
   http: 1.3.0
